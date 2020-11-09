@@ -60,13 +60,16 @@ server.get('/jobs/:id', function (req, res) {
 // Helper Functions
 function submitJob(input, res) {
     jobId++;
+    pushToQueue(jobId, input).then(() => res.end(JSON.stringify({
+        'id': jobId
+    })));
+}
+
+async function pushToQueue(jobId, input){
     jobsQueue.push({
         'id': jobId,
         'input': input
     });
-    res.end(JSON.stringify({
-        'id': jobId
-    }));
 }
 
 function getJobDetails(id, res) {
@@ -83,10 +86,9 @@ function getJobDetails(id, res) {
 
 // Process jobs
 setInterval(function () {
-    console.log(jobsQueue.length);
     while (jobsQueue.length > 0)
         processJob(jobsQueue.shift()).then();
-}, 1000);
+}, 10);
 
 const { execFile } = require('child_process');
 async function processJob(job) {
