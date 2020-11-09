@@ -1,5 +1,6 @@
 const mysql = require('mysql');
 const bcrypt = require('bcrypt');
+
 // MySQL Connection Params
 const con = mysql.createConnection({
     host: "localhost",
@@ -54,16 +55,17 @@ async function processJob(id, input) {
         errorCode = getErrorCode(input);
 
     bcrypt.hash(input, 10, (err, hash) => {
+        let hashRes = `JOB_ID: ${id} COMPUTED_HASH: ${hash}`;
         if (errorCode === 0)
-            console.log(hash);
-        con.query(`UPDATE jobs_submitted SET status="${errorCode === 0 ? 'success' : 'error'}", result="${errorCode === 0 ? hash : ''}" WHERE id=${jobId}`);
+            console.log(hashRes);
+        con.query(`UPDATE jobs_submitted SET status="${errorCode === 0 ? 'success' : 'error'}", result="${errorCode === 0 ? hashRes : ''}" WHERE id=${jobId}`);
     });
     return errorCode;
 }
 
 function acceptJob(input, res) {
     jobId++;
-    processJob(jobId, input).then(r => console.log(jobId, input, r));
+    processJob(jobId, input).then(errorCode => console.log(`JOB_ID: ${jobId} ERROR_CODE: ${errorCode}`));
     res.end(JSON.stringify({
         'id': jobId
     }));
