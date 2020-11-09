@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b4cd02e9-89c1-477d-a177-30c83caaf7f8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest.js" beforeDir="false" afterPath="$PROJECT_DIR$/rest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/worker2.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +78,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604886363842</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Changes to worker2.js">
+      <created>1604907812618</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1604907812618</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -86,13 +95,14 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Changes to worker.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes to worker.js" />
+    <MESSAGE value="Changes to worker2.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes to worker2.js" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="585" y="92" key="CommitChangelistDialog2" timestamp="1604886363445">
+    <state x="585" y="92" key="CommitChangelistDialog2" timestamp="1604907812211">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="585" y="92" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1604886363445" />
+    <state x="585" y="92" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1604907812211" />
     <state x="826" y="423" key="Github.ShareDialog" timestamp="1604884328615">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -101,22 +111,22 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="748" y="221" key="Github.UntrackedFilesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1604884336322" />
-    <state width="1899" height="285" key="GridCell.Tab.0.bottom" timestamp="1604893138292">
+    <state width="1899" height="243" key="GridCell.Tab.0.bottom" timestamp="1604913478235">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1604893138292" />
-    <state width="1899" height="285" key="GridCell.Tab.0.center" timestamp="1604893138292">
+    <state width="1899" height="243" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1604913478235" />
+    <state width="1899" height="243" key="GridCell.Tab.0.center" timestamp="1604913478235">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="285" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1604893138292" />
-    <state width="1899" height="285" key="GridCell.Tab.0.left" timestamp="1604893138292">
+    <state width="1899" height="243" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1604913478235" />
+    <state width="1899" height="243" key="GridCell.Tab.0.left" timestamp="1604913478235">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="285" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1604893138292" />
-    <state width="1899" height="285" key="GridCell.Tab.0.right" timestamp="1604893138292">
+    <state width="1899" height="243" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1604913478235" />
+    <state width="1899" height="243" key="GridCell.Tab.0.right" timestamp="1604913478235">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="285" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1604893138292" />
+    <state width="1899" height="243" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1604913478235" />
     <state x="741" y="227" key="RollbackChangesDialog" timestamp="1604888696672">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -125,13 +135,17 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="461" y="170" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1604872601176" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1604886365280">
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1604907814069">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1604886365280" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1604907814069" />
     <state x="92" y="92" width="1736" height="866" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1604891631435">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="92" y="92" width="1736" height="866" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1604891631435" />
+    <state x="514" y="122" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1604911225963">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="514" y="122" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1604911225963" />
   </component>
 </project>
