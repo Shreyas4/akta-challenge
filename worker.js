@@ -24,6 +24,7 @@ con.connect(function (err) {
 
 // job counter
 let jobId = 0;
+let jobsQueue = [];
 
 function getErrorCode(input) {
     let errorCode = 0;
@@ -46,29 +47,37 @@ function getErrorCode(input) {
     return errorCode
 }
 
-async function processJob(id, input) {
+async function processJob(job) {
+    let input = job.input;
+    let id = job.id;
     con.query(`INSERT INTO jobs_submitted(id, status) VALUES (${id}, 'queued')`);
     let errorCode;
     if (input.length < 6)
         errorCode = 8;
     else
         errorCode = getErrorCode(input);
-    if (errorCode === 0)
-        computeHash(id, input, errorCode).then();
+    updateJobsTable(id, input, errorCode).then();
+    console.log(`JOB_ID: ${id} ERROR_CODE: ${errorCode}`)
     return errorCode;
 }
 
-async function computeHash(id, input, errorCode){
-    bcrypt.hash(input, 10, (err, hash) => {
-        let hashRes = `JOB_ID: ${id} COMPUTED_HASH: ${hash}`;
-        console.log(hashRes);
-        con.query(`UPDATE jobs_submitted SET status="${errorCode === 0 ? 'success' : 'error'}", result="${errorCode === 0 ? hashRes : ''}" WHERE id=${jobId}`);
-    });
+async function updateJobsTable(id, input, errorCode){
+    if(errorCode===0)
+        bcrypt.hash(input, 10, (err, hash) => {
+            let hashRes = `JOB_ID: ${id} COMPUTED_HASH: ${hash}`;
+            console.log(hashRes);
+            con.query(`UPDATE jobs_submitted SET status="success", result="${hashRes}" WHERE id=${id}`);
+        });
+    else
+        con.query(`UPDATE jobs_submitted SET status="error" WHERE id=${id}`);
 }
 
 function acceptJob(input, res) {
     jobId++;
-    processJob(jobId, input).then(errorCode => console.log(`JOB_ID: ${jobId} ERROR_CODE: ${errorCode}`));
+    jobsQueue.push({
+        'id': jobId,
+        'input': input
+    });
     res.end(JSON.stringify({
         'id': jobId
     }));
@@ -85,6 +94,11 @@ function getJobDetails(id, res) {
                 res.end(JSON.stringify(results));
         });
 }
+
+setInterval(function() {
+    if (jobsQueue.length > 0)
+        processJob(jobsQueue.shift()).then();
+}, 10);
 
 module.exports = {
     submitJob: acceptJob,

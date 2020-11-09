@@ -60,7 +60,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604861143565</updated>
-      <workItem from="1604861144760" duration="20403000" />
+      <workItem from="1604861144760" duration="25127000" />
     </task>
     <task id="LOCAL-00001" summary="Changes to worker.js">
       <created>1604884756093</created>
@@ -69,7 +69,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604884756093</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Changes to worker.js">
+      <created>1604886363842</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1604886363842</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -82,10 +89,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Changes to worker.js" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="585" y="92" key="CommitChangelistDialog2" timestamp="1604884755652">
+    <state x="585" y="92" key="CommitChangelistDialog2" timestamp="1604886363445">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="585" y="92" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1604884755652" />
+    <state x="585" y="92" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1604886363445" />
     <state x="826" y="423" key="Github.ShareDialog" timestamp="1604884328615">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -94,29 +101,37 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="748" y="221" key="Github.UntrackedFilesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1604884336322" />
-    <state width="1899" height="285" key="GridCell.Tab.0.bottom" timestamp="1604886088506">
+    <state width="1899" height="285" key="GridCell.Tab.0.bottom" timestamp="1604893138292">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1604886088506" />
-    <state width="1899" height="285" key="GridCell.Tab.0.center" timestamp="1604886088506">
+    <state width="1899" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1604893138292" />
+    <state width="1899" height="285" key="GridCell.Tab.0.center" timestamp="1604893138292">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="285" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1604886088506" />
-    <state width="1899" height="285" key="GridCell.Tab.0.left" timestamp="1604886088506">
+    <state width="1899" height="285" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1604893138292" />
+    <state width="1899" height="285" key="GridCell.Tab.0.left" timestamp="1604893138292">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="285" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1604886088506" />
-    <state width="1899" height="285" key="GridCell.Tab.0.right" timestamp="1604886088506">
+    <state width="1899" height="285" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1604893138292" />
+    <state width="1899" height="285" key="GridCell.Tab.0.right" timestamp="1604893138292">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="285" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1604886088506" />
+    <state width="1899" height="285" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1604893138292" />
+    <state x="741" y="227" key="RollbackChangesDialog" timestamp="1604888696672">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="741" y="227" key="RollbackChangesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1604888696672" />
     <state x="461" y="170" key="SettingsEditor" timestamp="1604872601176">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="461" y="170" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1604872601176" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1604884757600">
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1604886365280">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1604884757600" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1604886365280" />
+    <state x="92" y="92" width="1736" height="866" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1604891631435">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="92" y="92" width="1736" height="866" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1604891631435" />
   </component>
 </project>
