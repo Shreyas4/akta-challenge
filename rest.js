@@ -54,7 +54,7 @@ server.get('/jobs/:id', function (req, res) {
     if (!req.params.id)
         res.end(400);
     else
-        getJobDetails(req.params.id, res).then();
+        getJobDetails(req.params.id, res);
 });
 
 // Helper Functions
@@ -69,7 +69,7 @@ function submitJob(input, res) {
     }));
 }
 
-async function getJobDetails(id, res) {
+function getJobDetails(id, res) {
     if (id < 1)
         res.end(400);
     else
@@ -83,9 +83,10 @@ async function getJobDetails(id, res) {
 
 // Process jobs
 setInterval(function () {
-    if (jobsQueue.length > 0)
+    console.log(jobsQueue.length);
+    while (jobsQueue.length > 0)
         processJob(jobsQueue.shift()).then();
-}, 10);
+}, 1000);
 
 const { execFile } = require('child_process');
 async function processJob(job) {
