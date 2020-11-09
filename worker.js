@@ -53,14 +53,17 @@ async function processJob(id, input) {
         errorCode = 8;
     else
         errorCode = getErrorCode(input);
+    if (errorCode === 0)
+        computeHash(id, input, errorCode).then();
+    return errorCode;
+}
 
+async function computeHash(id, input, errorCode){
     bcrypt.hash(input, 10, (err, hash) => {
         let hashRes = `JOB_ID: ${id} COMPUTED_HASH: ${hash}`;
-        if (errorCode === 0)
-            console.log(hashRes);
+        console.log(hashRes);
         con.query(`UPDATE jobs_submitted SET status="${errorCode === 0 ? 'success' : 'error'}", result="${errorCode === 0 ? hashRes : ''}" WHERE id=${jobId}`);
     });
-    return errorCode;
 }
 
 function acceptJob(input, res) {
@@ -76,8 +79,10 @@ function getJobDetails(id, res) {
         res.end(400);
     else
         con.query(`SELECT status, result FROM jobs_submitted WHERE id=${id}`, function (error, results) {
-            if (error) throw error
-            res.end(JSON.stringify(results));
+            if (error)
+                res.end(400);
+            else
+                res.end(JSON.stringify(results));
         });
 }
 
